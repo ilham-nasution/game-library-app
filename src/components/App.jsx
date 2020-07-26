@@ -1,9 +1,12 @@
 import React from "react";
+import Header from "./Header";
+import GameList from "./GameList";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-primary">homepage</h1>
+    <div className="bg-secondary">
+      <Header />
+      <GameList />
     </div>
   );
 };
