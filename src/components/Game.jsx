@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Game = (props) => {
   return (
-    <div className="col mb-4">
+    <Link to={`games/${props.id}`} className="col mb-4">
       <div className="card h-100 shadow-sm">
         <img
           src={props.imageURL}
@@ -17,7 +18,7 @@ const Game = (props) => {
           <p className="card-text">Release date: {props.released}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

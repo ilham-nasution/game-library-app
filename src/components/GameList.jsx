@@ -11,7 +11,7 @@ const GameList = () => {
     const fetchGames = async () => {
       setLoading(true);
       const result = await fetch(
-        `https://api.rawg.io/api/games?page=${currentPage}`
+        `https://api.rawg.io/api/games?page=${currentPage}&page_size=9`
       );
       const data = await result.json();
       setGames(data.results);
@@ -44,6 +44,7 @@ const GameList = () => {
         {games.map((game) => (
           <Game
             key={game.id}
+            id={game.id}
             imageURL={game.background_image}
             name={game.name}
             released={game.released}
