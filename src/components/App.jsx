@@ -4,7 +4,7 @@ import GameList from "./GameList";
 
 const App = () => {
   return (
-    <div className="bg-secondary">
+    <div className="bg-light">
       <Header />
       <GameList />
     </div>
