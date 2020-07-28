@@ -1,31 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Game from "./Game";
 import Pagination from "./Pagination";
+import { GameContext } from "./GameContext";
 
 const GameList = () => {
-  const [games, setGames] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const fetchGames = async () => {
-      setLoading(true);
-      const result = await fetch(
-        `https://api.rawg.io/api/games?page=${currentPage}&page_size=9`
-      );
-      const data = await result.json();
-      setGames(data.results);
-      setLoading(false);
-    };
-    fetchGames();
-    return () => {
-      setGames([]);
-    };
-  }, [currentPage]);
-
-  const handlePaginate = (number) => {
-    setCurrentPage(number);
-  };
+  const [
+    games,
+    setGames,
+    handlePaginate,
+    loading,
+    setLoading,
+    currentPage,
+  ] = useContext(GameContext);
 
   return (
     <div className="container mt-5">

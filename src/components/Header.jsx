@@ -1,4 +1,5 @@
 import React from "react";
+import Search from "./Search";
 
 const Header = () => {
   return (
@@ -13,6 +14,7 @@ const Header = () => {
         />
         Game Library
       </a>
+      <Search />
     </nav>
   );
 };

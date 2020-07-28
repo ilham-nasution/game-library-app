@@ -31,7 +31,9 @@ const GameDetail = () => {
           <span className="mr-2">{platform.platform.name}</span>
         ))}
         <h5 className="mt-2">Rating on metacritic:</h5>
-        <span class="badge badge-pill badge-danger p-3">{game.metacritic}</span>
+        <span className="badge badge-pill badge-danger p-3">
+          {game.metacritic}
+        </span>
       </div>
     </>
   );

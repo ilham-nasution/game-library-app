@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Game = (props) => {
   return (
-    <Link to={`games/${props.id}`} className="col mb-4">
+    <Link to={`games/${props.id}`} className="col mb-4 text-decoration-none">
       <div className="card h-100 shadow-sm">
         <img
           src={props.imageURL}
